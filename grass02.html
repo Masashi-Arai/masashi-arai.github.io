@@ -1,0 +1,385 @@
+<html>
+    <head>
+        <title>主観評価実験</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <style type="text/css">
+            .swiper-container {
+                padding: 0px ;
+                background: #eeeeee;
+            }
+
+            .swiper-button-prev, .swiper-button-next {
+                background-image: none;
+                /* デフォルトのボタンを消す */
+                width: 28px;
+                /* ボタンの幅 */
+                height: 86px;
+                /* ボタンの高さ */
+                margin-top: -43px;
+                /* 縦中央配置用：ボタンの高さの半分のネガティブマージン（top:50%がすでに設定されている） */
+            }
+
+            /* 前ページボタンのスタイル */
+            .swiper-button-prev:before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 800;
+                content: "\f100";
+                /* angle-double-leftのUnicode */
+                font-size: 48px;
+                color: #ffefd5;
+            }
+
+            /* 次ページボタンのスタイル */
+            .swiper-button-next:before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 800;
+                content: "\f101";
+                /* angle-double-rightのUnicode */
+                font-size: 48px;
+                color: #ffefd5;
+            }
+
+            .s-fade-wrap {
+                position: relative;
+                max-width: 1024px;
+                margin: 0 auto;
+            }
+
+            .s-fade-text {
+                position: absolute;
+                top: 5%;
+                left: -40%;
+                width: 100%;
+                text-align: center;
+                color: white;
+                font-size: 3vw;
+            }
+
+            .swiper-slide-active .s-fade-text {
+                animation: slideTextFade 1.0s ease 0s 1 normal;
+            }
+
+            @keyframes slideTextFade {
+                0%, 25% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            #loading {
+                width: 100%;
+                height: 100vh;
+                background-color: #fff;
+                position: relative;
+            }
+
+            #loading img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="loading" style="float:left;">
+            <img src="gif/load.gif" alt="loading">
+        </div>
+        <div id="contents" class="box_ab hidden" style="width:3840;height:2160;">
+            <div class="box_b" style="float:left;width:1024;height:1024;">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_032)_synthesis_07.bmp">
+                                <span class="s-fade-text">A</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_032)_synthesis_09.bmp">
+                                <span class="s-fade-text">B</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_032)_synthesis_17.bmp">
+                                <span class="s-fade-text">C</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_064)_synthesis_04.bmp">
+                                <span class="s-fade-text">D</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_064)_synthesis_15.bmp">
+                                <span class="s-fade-text">E</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_128)_synthesis_05.bmp">
+                                <span class="s-fade-text">F</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_128)_synthesis_13.bmp">
+                                <span class="s-fade-text">G</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_032)_synthesis_01.bmp">
+                                <span class="s-fade-text">H</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_032)_synthesis_10.bmp">
+                                <span class="s-fade-text">I</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_032)_synthesis_19.bmp">
+                                <span class="s-fade-text">J</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_064)_synthesis_06.bmp">
+                                <span class="s-fade-text">K</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_064)_synthesis_09.bmp">
+                                <span class="s-fade-text">L</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_064)_synthesis_13.bmp">
+                                <span class="s-fade-text">M</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_064)_synthesis_16.bmp">
+                                <span class="s-fade-text">N</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_128)_synthesis_02.bmp">
+                                <span class="s-fade-text">O</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_128)_synthesis_03.bmp">
+                                <span class="s-fade-text">P</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_128)_synthesis_05.bmp">
+                                <span class="s-fade-text">Q</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_256)_synthesis_04.bmp">
+                                <span class="s-fade-text">R</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_256)_synthesis_18.bmp">
+                                <span class="s-fade-text">S</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_256)_synthesis_19.bmp">
+                                <span class="s-fade-text">T</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="box_c" style="float:left;width:1024;height:1024;">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_032)_synthesis_07.bmp">
+                                <span class="s-fade-text">A</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_032)_synthesis_09.bmp">
+                                <span class="s-fade-text">B</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_032)_synthesis_17.bmp">
+                                <span class="s-fade-text">C</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_064)_synthesis_04.bmp">
+                                <span class="s-fade-text">D</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_064)_synthesis_15.bmp">
+                                <span class="s-fade-text">E</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_128)_synthesis_05.bmp">
+                                <span class="s-fade-text">F</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(256_128)_synthesis_13.bmp">
+                                <span class="s-fade-text">G</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_032)_synthesis_01.bmp">
+                                <span class="s-fade-text">H</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_032)_synthesis_10.bmp">
+                                <span class="s-fade-text">I</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_032)_synthesis_19.bmp">
+                                <span class="s-fade-text">J</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_064)_synthesis_06.bmp">
+                                <span class="s-fade-text">K</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_064)_synthesis_09.bmp">
+                                <span class="s-fade-text">L</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_064)_synthesis_13.bmp">
+                                <span class="s-fade-text">M</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_064)_synthesis_16.bmp">
+                                <span class="s-fade-text">N</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_128)_synthesis_02.bmp">
+                                <span class="s-fade-text">O</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_128)_synthesis_03.bmp">
+                                <span class="s-fade-text">P</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_128)_synthesis_05.bmp">
+                                <span class="s-fade-text">Q</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_256)_synthesis_04.bmp">
+                                <span class="s-fade-text">R</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_256)_synthesis_18.bmp">
+                                <span class="s-fade-text">S</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/grass/02/grass02(1024x1024_YUV420)_(512_256)_synthesis_19.bmp">
+                                <span class="s-fade-text">T</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="box_a" style="float:left;">
+                <iframe src="https://forms.gle/h9kCJwiXq8zqnQkB7" width="800" height="1024" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container',{
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 10,
+                paginationClickable: true,
+                observer: true,
+                observeParents: true,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+            });
+            // loadingのdivを取得
+            var loading = document.getElementById('loading');
+            // contentsのdivを取得
+            var contents = document.getElementById('contents');
+            // 読み込みが完了したら
+            window.addEventListener('load', function() {
+                // loadingのdivを非表示に
+                loading.style.display = 'none';
+                // contentsのdivを表示
+                contents.classList.remove('hidden');
+            });
+        </script>
+    </body>
+</html>
