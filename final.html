@@ -1,0 +1,883 @@
+<html>
+    <head>
+        <title>主観評価実験</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <style type="text/css">
+            .swiper-container {
+                padding: 0px ;
+                background: #eeeeee;
+            }
+
+            .swiper-button-prev, .swiper-button-next {
+                background-image: none;
+                /* デフォルトのボタンを消す */
+                width: 28px;
+                /* ボタンの幅 */
+                height: 86px;
+                /* ボタンの高さ */
+                margin-top: -43px;
+                /* 縦中央配置用：ボタンの高さの半分のネガティブマージン（top:50%がすでに設定されている） */
+            }
+
+            /* 前ページボタンのスタイル */
+            .swiper-button-prev:before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 800;
+                content: "\f100";
+                /* angle-double-leftのUnicode */
+                font-size: 48px;
+                color: #ffefd5;
+            }
+
+            /* 次ページボタンのスタイル */
+            .swiper-button-next:before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 800;
+                content: "\f101";
+                /* angle-double-rightのUnicode */
+                font-size: 48px;
+                color: #ffefd5;
+            }
+
+            .s-fade-wrap {
+                position: relative;
+                max-width: 1024px;
+                margin: 0 auto;
+            }
+
+            .s-fade-text {
+                position: absolute;
+                top: 5%;
+                left: 0%;
+                width: 100%;
+                text-align: center;
+                color: red;
+                font-size: 3vw;
+            }
+
+            .swiper-slide-active .s-fade-text {
+                animation: slideTextFade 1.0s ease 0s 1 normal;
+            }
+
+            @keyframes slideTextFade {
+                0%, 25% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            #loading {
+                width: 100%;
+                height: 100vh;
+                background-color: #fff;
+                position: relative;
+            }
+
+            #loading img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="loading" style="float:left;">
+            <img src="gif/load.gif" alt="loading">
+        </div>
+        <div id="contents" class="box_ab hidden" style="width:3840;height:2160;">
+            <div class="box_b" style="float:left;width:512;height:512;">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/origin/final02.bmp">
+                                <span class="s-fade-text">原画像1~40</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/origin/final10.bmp">
+                                <span class="s-fade-text">原画像41~80</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/origin/final12.bmp">
+                                <span class="s-fade-text">原画像81~120</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="box_a" style="float:left;">
+                <iframe src="https://forms.gle/vSdXcJr4W9RYrd1D6" width="800" height="1024" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
+            </div>
+            <div class="box_c" style="float:left;width:512;height:512;">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d001.jpeg">
+                                <span class="s-fade-text">1</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d002.jpeg">
+                                <span class="s-fade-text">2</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d003.jpeg">
+                                <span class="s-fade-text">3</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d004.jpeg">
+                                <span class="s-fade-text">4</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d005.jpeg">
+                                <span class="s-fade-text">5</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d006.jpeg">
+                                <span class="s-fade-text">6</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d007.jpeg">
+                                <span class="s-fade-text">7</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d008.jpeg">
+                                <span class="s-fade-text">8</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d009.jpeg">
+                                <span class="s-fade-text">9</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d010.jpeg">
+                                <span class="s-fade-text">10</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d011.jpeg">
+                                <span class="s-fade-text">11</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d012.jpeg">
+                                <span class="s-fade-text">12</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d013.jpeg">
+                                <span class="s-fade-text">13</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d014.jpeg">
+                                <span class="s-fade-text">14</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d015.jpeg">
+                                <span class="s-fade-text">15</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d016.jpeg">
+                                <span class="s-fade-text">16</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d017.jpeg">
+                                <span class="s-fade-text">17</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d018.jpeg">
+                                <span class="s-fade-text">18</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d019.jpeg">
+                                <span class="s-fade-text">19</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d020.jpeg">
+                                <span class="s-fade-text">20</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d021.jpeg">
+                                <span class="s-fade-text">21</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d022.jpeg">
+                                <span class="s-fade-text">22</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d023.jpeg">
+                                <span class="s-fade-text">23</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d024.jpeg">
+                                <span class="s-fade-text">24</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d025.jpeg">
+                                <span class="s-fade-text">25</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d026.jpeg">
+                                <span class="s-fade-text">26</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d027.jpeg">
+                                <span class="s-fade-text">27</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d028.jpeg">
+                                <span class="s-fade-text">28</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d029.jpeg">
+                                <span class="s-fade-text">29</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d030.jpeg">
+                                <span class="s-fade-text">30</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d031.jpeg">
+                                <span class="s-fade-text">31</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d032.jpeg">
+                                <span class="s-fade-text">32</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d033.jpeg">
+                                <span class="s-fade-text">33</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d034.jpeg">
+                                <span class="s-fade-text">34</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d035.jpeg">
+                                <span class="s-fade-text">35</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d036.jpeg">
+                                <span class="s-fade-text">36</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d037.jpeg">
+                                <span class="s-fade-text">37</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d038.jpeg">
+                                <span class="s-fade-text">38</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d039.jpeg">
+                                <span class="s-fade-text">39</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final01_d040.jpeg">
+                                <span class="s-fade-text">40</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d001.jpeg">
+                                <span class="s-fade-text">41</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d002.jpeg">
+                                <span class="s-fade-text">42</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d003.jpeg">
+                                <span class="s-fade-text">43</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d004.jpeg">
+                                <span class="s-fade-text">44</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d005.jpeg">
+                                <span class="s-fade-text">45</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d006.jpeg">
+                                <span class="s-fade-text">46</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d007.jpeg">
+                                <span class="s-fade-text">47</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d008.jpeg">
+                                <span class="s-fade-text">48</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d009.jpeg">
+                                <span class="s-fade-text">49</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d010.jpeg">
+                                <span class="s-fade-text">50</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d011.jpeg">
+                                <span class="s-fade-text">51</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d012.jpeg">
+                                <span class="s-fade-text">52</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d013.jpeg">
+                                <span class="s-fade-text">53</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d014.jpeg">
+                                <span class="s-fade-text">54</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d015.jpeg">
+                                <span class="s-fade-text">55</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d016.jpeg">
+                                <span class="s-fade-text">56</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d017.jpeg">
+                                <span class="s-fade-text">57</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d018.jpeg">
+                                <span class="s-fade-text">58</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d019.jpeg">
+                                <span class="s-fade-text">59</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d020.jpeg">
+                                <span class="s-fade-text">60</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d021.jpeg">
+                                <span class="s-fade-text">61</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d022.jpeg">
+                                <span class="s-fade-text">62</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d023.jpeg">
+                                <span class="s-fade-text">63</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d024.jpeg">
+                                <span class="s-fade-text">64</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d025.jpeg">
+                                <span class="s-fade-text">65</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d026.jpeg">
+                                <span class="s-fade-text">66</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d027.jpeg">
+                                <span class="s-fade-text">67</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d028.jpeg">
+                                <span class="s-fade-text">68</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d029.jpeg">
+                                <span class="s-fade-text">69</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d030.jpeg">
+                                <span class="s-fade-text">70</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d031.jpeg">
+                                <span class="s-fade-text">71</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d032.jpeg">
+                                <span class="s-fade-text">72</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d033.jpeg">
+                                <span class="s-fade-text">73</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d034.jpeg">
+                                <span class="s-fade-text">74</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d035.jpeg">
+                                <span class="s-fade-text">75</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d036.jpeg">
+                                <span class="s-fade-text">76</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d037.jpeg">
+                                <span class="s-fade-text">77</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d038.jpeg">
+                                <span class="s-fade-text">78</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d039.jpeg">
+                                <span class="s-fade-text">79</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final02_d040.jpeg">
+                                <span class="s-fade-text">80</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d001.jpeg">
+                                <span class="s-fade-text">81</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d002.jpeg">
+                                <span class="s-fade-text">82</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d003.jpeg">
+                                <span class="s-fade-text">83</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d004.jpeg">
+                                <span class="s-fade-text">84</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d005.jpeg">
+                                <span class="s-fade-text">85</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d006.jpeg">
+                                <span class="s-fade-text">86</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d007.jpeg">
+                                <span class="s-fade-text">87</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d008.jpeg">
+                                <span class="s-fade-text">88</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d009.jpeg">
+                                <span class="s-fade-text">89</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d010.jpeg">
+                                <span class="s-fade-text">90</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d011.jpeg">
+                                <span class="s-fade-text">91</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d012.jpeg">
+                                <span class="s-fade-text">92</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d013.jpeg">
+                                <span class="s-fade-text">93</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d014.jpeg">
+                                <span class="s-fade-text">94</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d015.jpeg">
+                                <span class="s-fade-text">95</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d016.jpeg">
+                                <span class="s-fade-text">96</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d017.jpeg">
+                                <span class="s-fade-text">97</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d018.jpeg">
+                                <span class="s-fade-text">98</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d019.jpeg">
+                                <span class="s-fade-text">99</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d020.jpeg">
+                                <span class="s-fade-text">100</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d021.jpeg">
+                                <span class="s-fade-text">101</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d022.jpeg">
+                                <span class="s-fade-text">102</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d023.jpeg">
+                                <span class="s-fade-text">103</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d024.jpeg">
+                                <span class="s-fade-text">104</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d025.jpeg">
+                                <span class="s-fade-text">105</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d026.jpeg">
+                                <span class="s-fade-text">106</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d027.jpeg">
+                                <span class="s-fade-text">107</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d028.jpeg">
+                                <span class="s-fade-text">108</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d029.jpeg">
+                                <span class="s-fade-text">109</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d030.jpeg">
+                                <span class="s-fade-text">110</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d031.jpeg">
+                                <span class="s-fade-text">111</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d032.jpeg">
+                                <span class="s-fade-text">112</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d033.jpeg">
+                                <span class="s-fade-text">113</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d034.jpeg">
+                                <span class="s-fade-text">114</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d035.jpeg">
+                                <span class="s-fade-text">115</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d036.jpeg">
+                                <span class="s-fade-text">116</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d037.jpeg">
+                                <span class="s-fade-text">117</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d038.jpeg">
+                                <span class="s-fade-text">118</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d039.jpeg">
+                                <span class="s-fade-text">119</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="s-fade-wrap">
+                                <img src="img/final/final03_d040.jpeg">
+                                <span class="s-fade-text">120</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container',{
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 10,
+                paginationClickable: true,
+                observer: true,
+                observeParents: true,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+            });
+            // loadingのdivを取得
+            var loading = document.getElementById('loading');
+            // contentsのdivを取得
+            var contents = document.getElementById('contents');
+            // 読み込みが完了したら
+            window.addEventListener('load', function() {
+                // loadingのdivを非表示に
+                loading.style.display = 'none';
+                // contentsのdivを表示
+                contents.classList.remove('hidden');
+            });
+        </script>
+    </body>
+</html>
